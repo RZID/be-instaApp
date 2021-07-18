@@ -24,6 +24,7 @@ app.use(users);
 app.use(posts);
 
 app.use("/profile/image", express.static("storages/profile"));
+app.use("/post/image", express.static("storages/post"));
 
 app.listen(env.app.port, () => {
   console.log(`${env.app.name} running at ${env.app.url}:${env.app.port}`);

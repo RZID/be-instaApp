@@ -47,8 +47,9 @@ module.exports = {
   },
   getRandomPost: async (req, res) => {
     try {
-      const data = await post.aggregate([{ $sample: { size: 10 } }]);
-      responser.ok_200(res, "Success get random posts", data);
+      const postData = await post.aggregate([{ $sample: { size: 10 } }]);
+      console.log(await data);
+      responser.ok_200(res, "Success get random posts", await data);
     } catch (error) {
       return responser.internalServerError_500(
         res,
