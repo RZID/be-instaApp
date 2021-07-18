@@ -1,3 +1,4 @@
 node_modules
 .env
-storages/post/*
+storages/post/*.jpg
+storages/post/*.png
